@@ -1,0 +1,14 @@
+release/codeeditor.o
+release/codeform.o
+release/highlighter.o
+release/main.o
+release/mainwindow.o
+release/mytree.o
+release/public.o
+release/replaceform.o
+release/searchform.o
+release/moc_codeeditor.o
+release/moc_codeform.o
+release/moc_mainwindow.o
+release/moc_replaceform.o
+release/moc_searchform.o
