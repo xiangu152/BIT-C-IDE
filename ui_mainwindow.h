@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -48,7 +48,8 @@ public:
     QAction *action_runsetting;
     QAction *action_mutipleRun;
     QAction *action_closeDir;
-    QAction *actionFormat;
+    QAction *action_format;
+    QAction *action_fold;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     myTree *file_widget;
@@ -117,8 +118,10 @@ public:
         action_mutipleRun->setObjectName(QString::fromUtf8("action_mutipleRun"));
         action_closeDir = new QAction(MainWindow);
         action_closeDir->setObjectName(QString::fromUtf8("action_closeDir"));
-        actionFormat = new QAction(MainWindow);
-        actionFormat->setObjectName(QString::fromUtf8("actionFormat"));
+        action_format = new QAction(MainWindow);
+        action_format->setObjectName(QString::fromUtf8("action_format"));
+        action_fold = new QAction(MainWindow);
+        action_fold->setObjectName(QString::fromUtf8("action_fold"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -145,7 +148,7 @@ public:
         file_widget->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1150, 28));
+        menubar->setGeometry(QRect(0, 0, 1150, 27));
         menubar->setDefaultUp(false);
         menubar->setNativeMenuBar(true);
         menu_file = new QMenu(menubar);
@@ -191,7 +194,8 @@ public:
         menu_run->addAction(action_mutipleRun);
         menu_tool->addAction(action_find);
         menu_tool->addAction(action_replace);
-        menu_tool->addAction(actionFormat);
+        menu_tool->addAction(action_format);
+        menu_tool->addAction(action_fold);
         menu_setting->addAction(action_font);
         menu_setting->addAction(action_runsetting);
 
@@ -205,54 +209,55 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        action_newFile->setText(QApplication::translate("MainWindow", "\346\226\260\345\273\272\346\226\207\344\273\266", nullptr));
-        action_openFile->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\346\226\207\344\273\266", nullptr));
-        action_newFolder->setText(QApplication::translate("MainWindow", "\346\226\260\345\273\272\346\226\207\344\273\266\345\244\271", nullptr));
-        action_openFolder->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\346\226\207\344\273\266\345\244\271", nullptr));
-        action_closeFile->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255\346\226\207\344\273\266", nullptr));
-        action_exit->setText(QApplication::translate("MainWindow", "\351\200\200\345\207\272", nullptr));
-        action_withdraw->setText(QApplication::translate("MainWindow", "\346\222\244\345\233\236", nullptr));
-#ifndef QT_NO_SHORTCUT
-        action_withdraw->setShortcut(QApplication::translate("MainWindow", "Ctrl+Z", nullptr));
-#endif // QT_NO_SHORTCUT
-        action_recover->setText(QApplication::translate("MainWindow", "\346\201\242\345\244\215", nullptr));
-#ifndef QT_NO_SHORTCUT
-        action_recover->setShortcut(QApplication::translate("MainWindow", "Ctrl+Y", nullptr));
-#endif // QT_NO_SHORTCUT
-        action_cut->setText(QApplication::translate("MainWindow", "\345\211\252\345\210\207", nullptr));
-#ifndef QT_NO_SHORTCUT
-        action_cut->setShortcut(QApplication::translate("MainWindow", "Ctrl+X", nullptr));
-#endif // QT_NO_SHORTCUT
-        action_copy->setText(QApplication::translate("MainWindow", "\345\244\215\345\210\266", nullptr));
-#ifndef QT_NO_SHORTCUT
-        action_copy->setShortcut(QApplication::translate("MainWindow", "Ctrl+C", nullptr));
-#endif // QT_NO_SHORTCUT
-        action_paste->setText(QApplication::translate("MainWindow", "\347\262\230\350\264\264", nullptr));
-#ifndef QT_NO_SHORTCUT
-        action_paste->setShortcut(QApplication::translate("MainWindow", "Ctrl+V", nullptr));
-#endif // QT_NO_SHORTCUT
-        action_all->setText(QApplication::translate("MainWindow", "\345\205\250\351\200\211", nullptr));
-        action_compile->setText(QApplication::translate("MainWindow", "\347\274\226\350\257\221", nullptr));
-        action_run->setText(QApplication::translate("MainWindow", "\347\274\226\350\257\221\350\277\220\350\241\214", nullptr));
-        action_find->setText(QApplication::translate("MainWindow", "\346\237\245\346\211\276", nullptr));
-        action_replace->setText(QApplication::translate("MainWindow", "\346\233\277\346\215\242", nullptr));
-        action_save->setText(QApplication::translate("MainWindow", "\344\277\235\345\255\230\346\226\207\344\273\266", nullptr));
-#ifndef QT_NO_SHORTCUT
-        action_save->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", nullptr));
-#endif // QT_NO_SHORTCUT
-        action_saveAs->setText(QApplication::translate("MainWindow", "\345\217\246\345\255\230\344\270\272", nullptr));
-        action_font->setText(QApplication::translate("MainWindow", "\345\255\227\344\275\223", nullptr));
-        action_runsetting->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200/\345\205\263\351\227\255\347\274\226\350\257\221\346\240\217", nullptr));
-        action_mutipleRun->setText(QApplication::translate("MainWindow", "\345\244\232\346\226\207\344\273\266\347\274\226\350\257\221", nullptr));
-        action_closeDir->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255\346\226\207\344\273\266\345\244\271", nullptr));
-        actionFormat->setText(QApplication::translate("MainWindow", "Format", nullptr));
-        menu_file->setTitle(QApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
-        menu_editor->setTitle(QApplication::translate("MainWindow", "\347\274\226\350\276\221", nullptr));
-        menu_run->setTitle(QApplication::translate("MainWindow", "\350\277\220\350\241\214", nullptr));
-        menu_tool->setTitle(QApplication::translate("MainWindow", "\345\267\245\345\205\267", nullptr));
-        menu_setting->setTitle(QApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
-        menu_help->setTitle(QApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "IDE", nullptr));
+        action_newFile->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272\346\226\207\344\273\266", nullptr));
+        action_openFile->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200\346\226\207\344\273\266", nullptr));
+        action_newFolder->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272\346\226\207\344\273\266\345\244\271", nullptr));
+        action_openFolder->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200\346\226\207\344\273\266\345\244\271", nullptr));
+        action_closeFile->setText(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255\346\226\207\344\273\266", nullptr));
+        action_exit->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272", nullptr));
+        action_withdraw->setText(QCoreApplication::translate("MainWindow", "\346\222\244\345\233\236", nullptr));
+#if QT_CONFIG(shortcut)
+        action_withdraw->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Z", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_recover->setText(QCoreApplication::translate("MainWindow", "\346\201\242\345\244\215", nullptr));
+#if QT_CONFIG(shortcut)
+        action_recover->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Y", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_cut->setText(QCoreApplication::translate("MainWindow", "\345\211\252\345\210\207", nullptr));
+#if QT_CONFIG(shortcut)
+        action_cut->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+X", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_copy->setText(QCoreApplication::translate("MainWindow", "\345\244\215\345\210\266", nullptr));
+#if QT_CONFIG(shortcut)
+        action_copy->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+C", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_paste->setText(QCoreApplication::translate("MainWindow", "\347\262\230\350\264\264", nullptr));
+#if QT_CONFIG(shortcut)
+        action_paste->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+V", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_all->setText(QCoreApplication::translate("MainWindow", "\345\205\250\351\200\211", nullptr));
+        action_compile->setText(QCoreApplication::translate("MainWindow", "\347\274\226\350\257\221", nullptr));
+        action_run->setText(QCoreApplication::translate("MainWindow", "\347\274\226\350\257\221\350\277\220\350\241\214", nullptr));
+        action_find->setText(QCoreApplication::translate("MainWindow", "\346\237\245\346\211\276", nullptr));
+        action_replace->setText(QCoreApplication::translate("MainWindow", "\346\233\277\346\215\242", nullptr));
+        action_save->setText(QCoreApplication::translate("MainWindow", "\344\277\235\345\255\230\346\226\207\344\273\266", nullptr));
+#if QT_CONFIG(shortcut)
+        action_save->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_saveAs->setText(QCoreApplication::translate("MainWindow", "\345\217\246\345\255\230\344\270\272", nullptr));
+        action_font->setText(QCoreApplication::translate("MainWindow", "\345\255\227\344\275\223", nullptr));
+        action_runsetting->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200/\345\205\263\351\227\255\347\274\226\350\257\221\346\240\217", nullptr));
+        action_mutipleRun->setText(QCoreApplication::translate("MainWindow", "\345\244\232\346\226\207\344\273\266\347\274\226\350\257\221", nullptr));
+        action_closeDir->setText(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255\346\226\207\344\273\266\345\244\271", nullptr));
+        action_format->setText(QCoreApplication::translate("MainWindow", "\346\216\222\347\211\210", nullptr));
+        action_fold->setText(QCoreApplication::translate("MainWindow", "\345\207\275\346\225\260\346\212\230\345\217\240/\345\261\225\345\274\200", nullptr));
+        menu_file->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
+        menu_editor->setTitle(QCoreApplication::translate("MainWindow", "\347\274\226\350\276\221", nullptr));
+        menu_run->setTitle(QCoreApplication::translate("MainWindow", "\350\277\220\350\241\214", nullptr));
+        menu_tool->setTitle(QCoreApplication::translate("MainWindow", "\345\267\245\345\205\267", nullptr));
+        menu_setting->setTitle(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
+        menu_help->setTitle(QCoreApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
     } // retranslateUi
 
 };

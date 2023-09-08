@@ -73,7 +73,10 @@ private slots:
 
     void on_action_run_triggered();
 
-    void on_actionFormat_triggered();
+
+    void on_action_format_triggered();
+
+    void on_action_fold_triggered();
 
 private:
     Ui::MainWindow *ui;

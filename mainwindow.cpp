@@ -376,10 +376,17 @@ void MainWindow::on_action_run_triggered()
 }
 
 
-void MainWindow::on_actionFormat_triggered()
+void MainWindow::on_action_format_triggered()
 {
     QString name=getCurrentWidget()->name;
     QString p=getCurrentWidget()->path;
     process pro;
     pro.format(p,name);
+}
+
+
+void MainWindow::on_action_fold_triggered()
+{
+    getCurrentWidget()->changeFold();
+    getCurrentWidget()->is_fold=!getCurrentWidget()->is_fold;
 }

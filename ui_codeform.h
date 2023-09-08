@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'codeform.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -118,7 +118,7 @@ public:
 
     void retranslateUi(QWidget *CodeForm)
     {
-        CodeForm->setWindowTitle(QApplication::translate("CodeForm", "Form", nullptr));
+        CodeForm->setWindowTitle(QCoreApplication::translate("CodeForm", "Form", nullptr));
     } // retranslateUi
 
 };

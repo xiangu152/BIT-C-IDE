@@ -22,7 +22,7 @@ QByteArray process::compile()
     QByteArray output;
     QProcess proces;
     QString command = "g++";
-//    chdir(this->lines.toStdString().c_str());
+    //    chdir(this->lines.toStdString().c_str());
     QStringList argument;
     argument<<"-o"<<this->name<<this->lines;
     proces.start(command,argument);
@@ -59,7 +59,7 @@ void process::run()
     pid = fork();
     if(pid==0)
     {
-         // 关闭读取端
+        // 关闭读取端
         pi2.Close(1);
         pi2.setOut(STDIN_FILENO);
         pi1.Close(0);
@@ -94,7 +94,7 @@ void process::run()
 }
 void process::format(const QString &line,const QString &name)
 {
-    chdir(line.split(name)[0].toStdString().c_str());
+    //chdir(line.split(name)[0].toStdString().c_str());
     QProcess pro;
     QString command = "python3";
     QStringList arguments;

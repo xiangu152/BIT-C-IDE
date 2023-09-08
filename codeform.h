@@ -38,6 +38,7 @@ public:
     QFont Font();
     void setFont(QFont);
     void setRunSetting(bool);
+    QList<QPair<int, QString>> deletedLines; // 存储被删除的行号和文本内容
 
 public slots:
     void start_search(QString);
@@ -45,11 +46,15 @@ public slots:
     void replace_func(QString,QString);
     void isChanged();
     void search_Next(QString);
+    void handleButtonClick();
+    void addContent(int line, QString content);
+    void changeFold();
 public:
     Ui::CodeForm *ui;
     QString path="";
     QString name="";
     bool is_change=false;
+    bool is_fold=false;
 
 };
 
